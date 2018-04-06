@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+# Code to return a list of filenames stored in a directory specified by
+# the user at runtime.
+
+# Author: D.Brough
+# Created: 11th May 2016
+
+# Imports the os module to allow python to interact with the operating system.
+import os
+
+# Asks the user to input absolute directory path.
+def directory():
+    return str(input('Enter full directory path: '))
+
+# Runs the main module.
+def main():
+    # Assigns the directory() definition to the path variable.
+    path = directory()
+    # Starts the for loop to find filename from the os.listdir command.
+    # Referencing the path variable declared above.
+    for filename in os.listdir(path):
+        # Prints the list of filenames to the console.
+        print (filename)
+
+# This is the standard boilerplate that calls the main() function.
+if __name__ == '__main__':
+    main()
